@@ -6,6 +6,8 @@ Desktop GUI that runs three coordinated AI agents:
 - Agent 2: YouTube Researcher
 - Agent 3: Orchestrator (coordinates both and streams status updates)
 
+For **step-by-step LinkedIn, YouTube, and `.env` setup**, see **[SETUP.md](SETUP.md)**.
+
 ## Project Structure
 
 ```text
@@ -26,6 +28,7 @@ Cusor_newproject/
 ├── main.py
 ├── multi_agent_app.spec
 ├── README.md
+├── SETUP.md
 └── requirements.txt
 ```
 
