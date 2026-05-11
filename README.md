@@ -137,6 +137,8 @@ You can deploy the app as a public web UI using Streamlit.
 For local web run:
 
 - `streamlit run streamlit_app.py`
+- In the app sidebar, open **Configuration** to set LinkedIn/YouTube keys directly in GUI.
+- Click **Apply in this session** to use them immediately, or **Save to .env** for persistence.
 
 ## 9) Optional Cursor Integration
 
