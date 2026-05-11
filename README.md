@@ -29,6 +29,7 @@ Cusor_newproject/
 ├── multi_agent_app.spec
 ├── README.md
 ├── SETUP.md
+├── streamlit_app.py
 └── requirements.txt
 ```
 
@@ -113,7 +114,31 @@ The app handles common production errors with descriptive feedback:
 - YouTube quota/rate limit responses (`403` / `429`)
 - Network timeouts and malformed API responses
 
-## 8) Optional Cursor Integration
+## 8) Deploy as Public Website (Streamlit)
+
+You can deploy the app as a public web UI using Streamlit.
+
+1. Push this repo to GitHub (already done in your case).
+2. Open [Streamlit Community Cloud](https://share.streamlit.io/) and connect your GitHub repo.
+3. Select:
+   - **Repository:** `Srk-1974/Agents_using_-cursor`
+   - **Branch:** `main`
+   - **Main file path:** `streamlit_app.py`
+4. In Streamlit app settings, add these secrets/env vars:
+   - `LINKEDIN_CLIENT_ID`
+   - `LINKEDIN_CLIENT_SECRET`
+   - `LINKEDIN_ACCESS_TOKEN`
+   - `LINKEDIN_REFRESH_TOKEN` (optional)
+   - `YOUTUBE_API_KEY`
+   - `REQUEST_TIMEOUT_SECONDS` (optional)
+   - `CURSOR_API_KEY` and `CURSOR_API_BASE_URL` (optional)
+5. Click deploy.
+
+For local web run:
+
+- `streamlit run streamlit_app.py`
+
+## 9) Optional Cursor Integration
 
 `cursor_integration.py` attempts to fetch structured post guidance from Cursor APIs when `CURSOR_API_KEY` is provided.
 
