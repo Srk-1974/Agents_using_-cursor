@@ -91,7 +91,7 @@ def save_form_values_to_env(form_values: Dict[str, str]) -> None:
 
 def render_config_sidebar() -> Settings:
     st.sidebar.header("Configuration")
-    st.sidebar.caption("Set API credentials in the GUI. Use Save to persist into .env for local runs.")
+    st.sidebar.caption("Set API credentials in the GUI. Save to .env is for local machine runs only.")
 
     if "config_values" not in st.session_state:
         st.session_state.config_values = settings_to_form_values(Settings.from_env())
@@ -127,7 +127,7 @@ def render_config_sidebar() -> Settings:
         )
 
         apply_changes = st.form_submit_button("Apply in this session", type="primary")
-        save_changes = st.form_submit_button("Save to .env")
+        save_changes = st.form_submit_button("Save to .env (local machine only)")
 
     updated_values = {
         "linkedin_client_id": linkedin_client_id,
